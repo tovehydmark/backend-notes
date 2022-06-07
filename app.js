@@ -6,6 +6,7 @@ const mysql = require('mysql2')
 
 var indexRouter = require('./routes/index');
 var createDocumentRouter = require('./routes/createDocument');
+var fetchDocumentsRouter = require('./routes/fetchDocuments')
 
 const cors = require('cors')
 
@@ -33,5 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/createDocument', createDocumentRouter);
+app.use('/fetchDocuments', fetchDocumentsRouter)
 
 module.exports = app;
