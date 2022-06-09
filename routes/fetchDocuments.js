@@ -18,7 +18,7 @@ router.get("/", function (req, res) {
                 console.log(err);
             }
 
-            console.log(result);
+
             res.json(result);
         });
     });

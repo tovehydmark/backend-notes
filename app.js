@@ -7,6 +7,8 @@ const mysql = require('mysql2')
 var updateDocumentsRouter = require('./routes/updateDocuments');
 var createDocumentRouter = require('./routes/createDocument');
 var fetchDocumentsRouter = require('./routes/fetchDocuments')
+var deleteDocumentsRouter = require('./routes/deleteDocuments')
+
 
 const cors = require('cors')
 
@@ -37,5 +39,6 @@ app.use(express.static(path.join(__dirname, 'public'), {
 app.use('/updateDocuments', updateDocumentsRouter);
 app.use('/createDocument', createDocumentRouter);
 app.use('/fetchDocuments', fetchDocumentsRouter)
+app.use('/deleteDocuments', deleteDocumentsRouter)
 
 module.exports = app;
