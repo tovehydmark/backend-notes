@@ -34,7 +34,7 @@ router.put("/", function (req, res) {
         if (err) {
             console.log(err);
         }
-        let sql = `UPDATE notes SET documentText="${req.body.documentText}" WHERE documentId=${req.body.documentId}`
+        let sql = `UPDATE notes SET documentText='${req.body.documentText}' WHERE documentId=${req.body.documentId}`
 
         req.app.locals.con.query(sql, function (err, result) {
             if (err) {
