@@ -1,17 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-const cors = require("cors");
-router.use(cors());
+// const cors = require("cors");
+// router.use(cors());
 
 
 // Update document in database
 
-router.delete("/", function (req, res) {
+router.get("/", function (req, res) {
+    res.send("hej")
+})
 
-    //Req.body är ett tomt objekt???
-    //Därför funkar inte delete
-    console.log("REQBODY", req.body); //Blir undefined eftersom det är ett tomt objekt
+router.delete("/", function (req, res) {
 
     let documentId = (req.body.thisDocumentId)
 
@@ -21,14 +21,13 @@ router.delete("/", function (req, res) {
         if (err) {
             console.log(err);
         }
-        let sql = `DELETE FROM notes WHERE documentId=${documentId}`
+        let sql = `DELETE FROM notes WHERE documentId=${Number(documentId)}`
 
         req.app.locals.con.query(sql, function (err, result) {
             if (err) {
                 console.log(err);
             }
 
-            // console.log(result);
             res.json(result)
         })
     })
