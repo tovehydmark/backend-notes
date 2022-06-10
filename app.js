@@ -8,6 +8,7 @@ var updateDocumentsRouter = require('./routes/updateDocuments');
 var createDocumentRouter = require('./routes/createDocument');
 var fetchDocumentsRouter = require('./routes/fetchDocuments')
 var deleteDocumentsRouter = require('./routes/deleteDocuments')
+var loginRouter = require('./routes/login')
 
 
 const cors = require('cors')
@@ -40,5 +41,6 @@ app.use('/updateDocuments', updateDocumentsRouter);
 app.use('/createDocument', createDocumentRouter);
 app.use('/fetchDocuments', fetchDocumentsRouter)
 app.use('/deleteDocuments', deleteDocumentsRouter)
+app.use('/login', loginRouter)
 
 module.exports = app;
