@@ -5,6 +5,10 @@ npm start (ligger på localhost:3003)
 
 Databasfil är inkluderad (notesbook.sql)
 
-Databasens namn: notesbookgit st
+
+Databasens namn: notesbook
+
 Användarnamn för databasen: notesbook
+
 Lösen för databasen: notesbook
+
