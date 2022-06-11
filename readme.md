@@ -12,3 +12,5 @@ Användarnamn för databasen: notesbook
 
 Lösen för databasen: notesbook
 
+
+Länk till frontendapplikation att köra med projektet https://github.com/tovehydmark/frontend-notes.git
